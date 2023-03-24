@@ -40,18 +40,18 @@ def handle_message(event):
     if event.message.type != "text":
         return
     
-    if event.message.text == "啟動":
+    if event.message.text == "菊菊":
         working_status = True
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="我是時下流行的菊菊AI智能，目前可以為您服務囉，歡迎來跟我一起菊菊~"))
         return
 
-    if event.message.text == "安靜":
+    if event.message.text == "閉菊":
         working_status = False
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="感謝您的使用，若需要我的服務，請跟我說 「啟動」 謝謝~"))
+            TextSendMessage(text="感謝您的使用，若需要菊菊的服務，請跟著我說 「菊菊」 謝謝~"))
         return
     
     if working_status:
