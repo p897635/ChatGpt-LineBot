@@ -44,7 +44,7 @@ def handle_message(event):
         working_status = True
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="我是時下流行的AI智能，目前可以為您服務囉，歡迎來跟我互動~"))
+            TextSendMessage(text="我是時下流行的菊菊AI智能，目前可以為您服務囉，歡迎來跟我一起菊菊~"))
         return
 
     if event.message.text == "安靜":
